@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 
 public class Produto{
     
+    String[] detalhes;
     String nome;
     int quantidade;
     double preco;
@@ -34,5 +35,13 @@ public class Produto{
     
     public double getPreco(){
         return preco;
+    }
+    
+    public String[] detalhesProduto(){
+        detalhes = new String[3];
+        detalhes[0] = Integer.toString(quantidade);
+        detalhes[1] = nome;
+        detalhes[2] = Double.toString(preco);
+        return detalhes;
     }
 }
